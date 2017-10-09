@@ -1,0 +1,29 @@
+{
+  "name": "recipe-app",
+  "version": "1.0.0",
+  "description": "An app for recipes",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "recipes"
+  ],
+  "author": "Jon Chaplin",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jchaplin2/recipe-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jchaplin2/recipe-app/issues"
+  },
+  "homepage": "https://github.com/jchaplin2/recipe-app#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "jasmine-core": "^2.8.0",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0"
+  }
+}
