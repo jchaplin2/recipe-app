@@ -10,16 +10,17 @@ app.Models.Recipe = Backbone.Model.extend({
 			instructions: []
 		};
 	},
-	containsNuts: function() {
+
+	checkForIngredient: function(ingredientType) {
 		var ingredientsArr = this.get("ingredients");
-		var nutsFlag = false;
+		var ingredientFlag = false;
 
 		for(var i = 0, len = ingredientsArr.length; i <len; i++) {
 			var ingredient = ingredientsArr[i];
-			if(ingredient.isNut)
-				nutsFlag = true;
+			if(ingredient[ingredientType])
+				ingredientFlag = true;
 		}
 
-		return nutsFlag;
+		return ingredientFlag;
 	}
 });

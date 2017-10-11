@@ -41,6 +41,28 @@ describe("A recipe", function(){
 				modifier: "juiced"
 			}]
 		});
+
+		withEggsRecipe = new app.Models.Recipe({
+			name: "Eggs Benedict",
+			ingredients: [{
+				baseIngredient: "Eggs",
+				isEgg: true,
+				quantity: "4",
+				modifier: ""
+			},{
+				baseIngredient: "English Muffin",
+				quantity: "2",
+				modifier: ""
+			},{
+				baseIngredient: "Canadian Bacon",
+				quantity: '4 slices',
+				modifier: "juliened"
+			},{
+				baseIngredient: "Hollandaise Sauce",
+				quantity: '1/2 cup',
+				modifier: ""
+			}]
+		});
 	});
 
 	it("should exist", function(){
@@ -57,8 +79,12 @@ describe("A recipe", function(){
 	});
 
 	it("should identify if it has nuts.", function(){
-		expect(noRestrictionsRecipe.containsNuts()).toBeFalsy();
-		expect(withNutsRecipe.containsNuts()).toBeTruthy();
+		expect(noRestrictionsRecipe.checkForIngredient("isNut")).toBeFalsy();
+		expect(withNutsRecipe.checkForIngredient("isNut")).toBeTruthy();
 	});
 
+	it("should identify if it has eggs", function(){
+		expect(noRestrictionsRecipe.checkForIngredient("isEgg")).toBeFalsy();
+		expect(withEggsRecipe.checkForIngredient("isEgg")).toBeTruthy();
+	});
 });
