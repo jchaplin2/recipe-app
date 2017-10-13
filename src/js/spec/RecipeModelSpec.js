@@ -1,12 +1,8 @@
 describe("A recipe", function(){
 	var noRestrictionsRecipe;
-	var withNutsRecipe;
-	var withEggsRecipe;
 
 	beforeEach(function(){
 		noRestrictionsRecipe = new app.Models.Recipe(FIXTURES.recipes.noRestrictions);
-		withNutsRecipe = new app.Models.Recipe(FIXTURES.recipes.withNuts);
-		withEggsRecipe = new app.Models.Recipe(FIXTURES.recipes.withEggs);
 	});
 
 	it("should exist", function(){
@@ -23,12 +19,25 @@ describe("A recipe", function(){
 	});
 
 	it("should identify if it has nuts.", function(){
+		var withNutsRecipe = new app.Models.Recipe(FIXTURES.recipes.withNuts);
+
 		expect(noRestrictionsRecipe.checkForIngredient("isNut")).toBeFalsy();
 		expect(withNutsRecipe.checkForIngredient("isNut")).toBeTruthy();
 	});
 
 	it("should identify if it has eggs", function(){
+		var withEggsRecipe = new app.Models.Recipe(FIXTURES.recipes.withEggs);
+
 		expect(noRestrictionsRecipe.checkForIngredient("isEgg")).toBeFalsy();
 		expect(withEggsRecipe.checkForIngredient("isEgg")).toBeTruthy();
 	});
+
+	it("should identify if it is vegetarian", function(){
+		var vegetarianRecipe = new app.Models.Recipe(FIXTURES.recipes.vegetarianRecipe);
+		var nonVegetarianRecipe = new app.Models.Recipe(FIXTURES.recipes.nonVegetarianRecipe);
+		
+		expect(vegetarianRecipe.checkForIngredient("isMeat")).toBeFalsy();
+		expect(nonVegetarianRecipe.checkForIngredient("isMeat")).toBeTruthy();
+	});
+
 });
