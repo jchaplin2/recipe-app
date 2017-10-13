@@ -19,7 +19,8 @@ module.exports = function(config) {
       'src/js/lib/backbone-min.js',
       'src/js/lib/jquery-min.js',
       'src/js/models/RecipeModel.js',
-      'src/js/spec/*.js'
+      'src/js/spec/*.js',
+      'src/js/spec/fixtures/*.js'
     ],
 
 
