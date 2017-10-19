@@ -2,7 +2,7 @@ var FIXTURES = window.FIXTURES || {};
 
 FIXTURES.recipes = {
 		noRestrictions: {
-			name: "marinara",
+			name: "Marinara",
 			ingredients: [{
 				baseIngredient: "pomodoros",
 				quantity: '8',
