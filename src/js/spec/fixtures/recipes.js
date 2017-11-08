@@ -3,6 +3,24 @@ var FIXTURES = window.FIXTURES || {};
 FIXTURES.recipes = {
 		noRestrictions: {
 			name: "Marinara",
+			dateAdded: 1509494400000,
+			ingredients: [{
+				baseIngredient: "pomodoros",
+				quantity: '8',
+				modifier: "crushed"
+			},{
+				baseIngredient: "onion",
+				quantity: '1',
+				modifier: "chopped"
+			},{
+				baseIngredient: "garlic",
+				quantity: '2 cloves',
+				modifier: "minced"
+			}]
+		},
+		noRestrictionsNovFourth: {
+			name: "Marinara",
+			dateAdded: 1509753600000,
 			ingredients: [{
 				baseIngredient: "pomodoros",
 				quantity: '8',

@@ -16,6 +16,7 @@ describe("A recipe", function(){
 		expect(recipe.get("rating")).toEqual(0);
 		expect(recipe.get("ingredients").length).toEqual(0);
 		expect(recipe.get("instructions").length).toEqual(0);
+		expect(recipe.get("dateAdded")).toBeDefined();		
 	});
 
 	it("should identify if it has nuts.", function(){

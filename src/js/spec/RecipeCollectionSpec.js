@@ -22,4 +22,15 @@ describe("A recipe", function() {
 
 		expect(recipes.getRecipeNames()).toEqual(['Marinara', 'Eggs Benedict']);
 	});
+
+	it('should return the most recent recipe of a given name.', function(){
+		var recipes = new app.Collections.Recipes([
+			FIXTURES.recipes.noRestrictions,
+			FIXTURES.recipes.noRestrictionsNovFourth
+		]);	
+
+		var newestDate = recipes.getNewestRecipeForName("Marinara").get("dateAdded");
+
+		expect(newestDate).toEqual(FIXTURES.recipes.noRestrictionsNovFourth.dateAdded);
+	});
 });

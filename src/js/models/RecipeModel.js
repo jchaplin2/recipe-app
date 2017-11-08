@@ -7,7 +7,8 @@ app.Models.Recipe = Backbone.Model.extend({
 			name: 'Unnamed',
 			rating: 0,
 			ingredients: [],
-			instructions: []
+			instructions: [],
+			dateAdded: Date.now()
 		};
 	},
 
