@@ -7,6 +7,7 @@ app.Collections.Recipes = Backbone.Collection.extend({
 	getRecipeNames: function(){
 		return _.uniq(this.pluck('name'));
 	},
+	url: '/recipes',
 	getNewestRecipeForName: function(recipeName) {
 		var variations = this.where({
 			name: recipeName

@@ -10,16 +10,20 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine-jquery','jasmine'],
 
 
     // list of files / patterns to load in the browser
     files: [
+      'src/js/lib/jquery-min.js',
       'src/js/lib/underscore-min.js',
       'src/js/lib/backbone-min.js',
-      'src/js/lib/jquery-min.js',
+      'src/js/lib/handlebars.min.js',
+      'src/templates/**/*.html',
+      'src/js/spec/helpers/*.js',
       'src/js/models/RecipeModel.js',
       'src/js/collections/RecipeCollection.js',
+      'src/js/views/RecipeView.js',
       'src/js/spec/*.js',
       'src/js/spec/fixtures/*.js'
     ],
@@ -33,6 +37,7 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+        '**/*.html':['html2js']
     },
 
 

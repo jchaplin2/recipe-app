@@ -33,4 +33,23 @@ describe("A recipe", function() {
 
 		expect(newestDate).toEqual(FIXTURES.recipes.noRestrictionsNovFourth.dateAdded);
 	});
+
+	it('should have a remote data source.', function(){
+		var recipes = new app.Collections.Recipes();
+
+		expect(recipes.url).toBeDefined();
+	});
+
+	it('should instantiate data from the back end.', function() {
+		var recipes = new app.Collections.Recipes();
+
+		spyOn(recipes, "fetch").and.callFake(function(options) {
+			var responseArray = [
+				JSON.stringify([FIXTURES.recipes.noRestrictions])
+			];
+
+			recipes.model.set(responseArray[0]);
+			expect(recipes.model.length).toBeGreaterThan(0);
+		});
+	});
 });
