@@ -16,7 +16,13 @@ FIXTURES.recipes = {
 				baseIngredient: "garlic",
 				quantity: '2 cloves',
 				modifier: "minced"
-			}]
+			}],
+			instructions: [
+				'Sautee onion in 2 Tbsp. olive oil',
+				'Add garlic when onions begin to soften, about 4 minutes',
+				'Add tomatoes and lower heat to low, stirring occasionally',
+				'Season with salt and pepper to taste'
+			]
 		},
 		noRestrictionsNovFourth: {
 			name: "Marinara",
