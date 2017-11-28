@@ -15,6 +15,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      'src/css/style.css',
       'src/js/lib/jquery-min.js',
       'src/js/lib/underscore-min.js',
       'src/js/lib/backbone-min.js',
