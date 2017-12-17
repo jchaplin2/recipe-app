@@ -106,7 +106,8 @@ describe("A recipe view", function(){
 			expect(recipeModel.get("note")).toBe(noteStr);
 
 			//Verify the view.
-			expect(recipeView.$(".note")).toHaveText(noteStr);
+			var $notesVal = recipeView.$(".note-area").val();
+			expect($notesVal).toBe(noteStr);
 		});
 	});
 });

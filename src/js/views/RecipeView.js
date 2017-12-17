@@ -14,11 +14,11 @@ app.Views.Recipe = Backbone.View.extend({
 		this.$el.html(this.template(data));
 	},
 	events: {
-		'click .add-note': 'triggerAndNoteView',
+		'click .add-note': 'triggerAddNoteView',
 		'click .cancel-note': 'triggerNormalView',
 		'click .save-note': 'saveNote'
 	},
-	triggerAndNoteView: function(){
+	triggerAddNoteView: function(){
 		this.$(".note-area, .save-note, .cancel-note").removeClass("hidden");
 		this.$(".add-note").addClass("hidden");
 	},
