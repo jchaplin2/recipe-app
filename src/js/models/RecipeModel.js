@@ -23,5 +23,13 @@ app.Models.Recipe = Backbone.Model.extend({
 		}
 
 		return ingredientFlag;
+	},
+
+	containsNuts: function() {
+		return this.checkForIngredient('isNuts');
+	},
+
+	containsEggs: function() {
+		return this.checkForIngredient('isEggs');
 	}
 });

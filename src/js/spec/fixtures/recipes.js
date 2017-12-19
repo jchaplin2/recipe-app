@@ -66,7 +66,7 @@ FIXTURES.recipes = {
 			name: "Eggs Benedict",
 			ingredients: [{
 				baseIngredient: "Eggs",
-				isEgg: true,
+				isEggs: true,
 				quantity: "4",
 				modifier: ""
 			},{
